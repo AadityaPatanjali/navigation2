@@ -490,20 +490,20 @@ VoxelLayer::dynamicParametersCallback(
 
     if (param_type == ParameterType::PARAMETER_DOUBLE) {
       if (param_name == name_ + "." + "max_obstacle_height") {
-        max_obstacle_height_ = parameter.as_double();
+        // max_obstacle_height_ = parameter.as_double();
       } else if (param_name == name_ + "." + "origin_z") {
-        origin_z_ = parameter.as_double();
-        resize_map_needed = true;
+        // origin_z_ = parameter.as_double();
+        // resize_map_needed = true;
       } else if (param_name == name_ + "." + "z_resolution") {
-        z_resolution_ = parameter.as_double();
-        resize_map_needed = true;
+        // z_resolution_ = parameter.as_double();
+        // resize_map_needed = true;
       }
     } else if (param_type == ParameterType::PARAMETER_BOOL) {
       if (param_name == name_ + "." + "enabled") {
-        enabled_ = parameter.as_bool();
-        current_ = false;
+        // enabled_ = parameter.as_bool();
+        // current_ = false;
       } else if (param_name == name_ + "." + "footprint_clearing_enabled") {
-        footprint_clearing_enabled_ = parameter.as_bool();
+        // footprint_clearing_enabled_ = parameter.as_bool();
       } else if (param_name == name_ + "." + "publish_voxel_map") {
         RCLCPP_WARN(
           logger_, "publish voxel map is not a dynamic parameter "
@@ -513,14 +513,14 @@ VoxelLayer::dynamicParametersCallback(
 
     } else if (param_type == ParameterType::PARAMETER_INTEGER) {
       if (param_name == name_ + "." + "z_voxels") {
-        size_z_ = parameter.as_int();
+        // size_z_ = parameter.as_int();
         resize_map_needed = true;
       } else if (param_name == name_ + "." + "unknown_threshold") {
-        unknown_threshold_ = parameter.as_int() + (VOXEL_BITS - size_z_);
+        // unknown_threshold_ = parameter.as_int() + (VOXEL_BITS - size_z_);
       } else if (param_name == name_ + "." + "mark_threshold") {
-        mark_threshold_ = parameter.as_int();
+        // mark_threshold_ = parameter.as_int();
       } else if (param_name == name_ + "." + "combination_method") {
-        combination_method_ = parameter.as_int();
+        // combination_method_ = parameter.as_int();
       }
     }
   }

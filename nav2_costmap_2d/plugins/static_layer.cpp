@@ -464,17 +464,17 @@ StaticLayer::dynamicParametersCallback(
         "cannot be changed while running. Rejecting parameter update.", param_name.c_str());
     } else if (param_type == ParameterType::PARAMETER_DOUBLE) {
       if (param_name == name_ + "." + "transform_tolerance") {
-        transform_tolerance_ = tf2::durationFromSec(parameter.as_double());
+        // transform_tolerance_ = tf2::durationFromSec(parameter.as_double());
       }
     } else if (param_type == ParameterType::PARAMETER_BOOL) {
       if (param_name == name_ + "." + "enabled" && enabled_ != parameter.as_bool()) {
-        enabled_ = parameter.as_bool();
+        // enabled_ = parameter.as_bool();
 
-        x_ = y_ = 0;
-        width_ = size_x_;
-        height_ = size_y_;
-        has_updated_data_ = true;
-        current_ = false;
+        // x_ = y_ = 0;
+        // width_ = size_x_;
+        // height_ = size_y_;
+        // has_updated_data_ = true;
+        // current_ = false;
       }
     }
   }
